@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 const session = require("express-session");
 
+const PlansRouter = require("./routes/PlansRouter");
+
 // View engine
 app.set('view engine','ejs');
 
@@ -24,6 +26,10 @@ app.use(bodyParser.json());
     app.get("/", (req, res) => {
         res.render("index.ejs");
     })
+
+// Routes
+
+    app.use("/", PlansRouter);
 
 // End Router
 app.listen(8090, () => {
