@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const session = require("express-session");
+const flash = require("connect-flash");
 
 const PlansRouter = require("./routes/PlansRouter");
 
@@ -13,6 +14,8 @@ app.use(session({
     saveUninitialized: true,
     resave: true
 }))
+
+app.use(flash());
 
 app.use(express.static('public'));
 

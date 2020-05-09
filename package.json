@@ -5,11 +5,13 @@
   "main": "index.js",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
     "mysql2": "^2.1.0",
-    "sequelize": "^5.21.3"
+    "sequelize": "^5.21.3",
+    "yup": "^0.28.5"
   },
   "devDependencies": {
     "nodemon": "^2.0.3",
